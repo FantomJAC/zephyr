@@ -219,6 +219,13 @@ int printk(const char *fmt, ...)
 	return ctx.count;
 }
 
+int vprintk(const char *fmt, va_list ap)
+{
+	struct out_context ctx = { 0 };
+	_vprintk((out_func_t)char_out, &ctx, fmt, ap);
+	return ctx.count;
+}
+
 /**
  * @brief Output an unsigned long in hex format
  *
