@@ -51,6 +51,8 @@ KBUILD_AFLAGS += $(aflags-y)
 KBUILD_CFLAGS += $(cflags-y)
 KBUILD_CXXFLAGS += $(cflags-y)
 
+LDFLAGS_zephyr += $(cflags-y)
+
 soc-cxxflags ?= $(soc-cflags)
 soc-aflags ?= $(soc-cflags)
 KBUILD_CFLAGS += $(soc-cflags)
