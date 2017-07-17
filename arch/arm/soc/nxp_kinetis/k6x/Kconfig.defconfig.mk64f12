@@ -48,7 +48,7 @@ config SPI
 
 if SPI
 
-config SPI_MCUX_DSPI
+config SPI_K64
 	def_bool y
 
 endif # SPI
